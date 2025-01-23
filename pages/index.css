@@ -270,6 +270,8 @@ body {
 
     .elements{
         max-width: 282px;
+        grid-template-columns: 1fr;
+        gap: 20px 0;
     }
 
     }

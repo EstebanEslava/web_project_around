@@ -13,12 +13,12 @@
 <body>
     <div class="page">
         <header class="header">
-            <img class="title" src="images/Vector.png" alt="logo">
+            <img class="header__title" src="images/Vector.png" alt="logo">
         </header>
     
     <main class="content">
         <section class="profile">
-            <img class="image__profile" src="images/Avatar.png" alt="profile">
+            <img class="profile__image" src="images/Avatar.png" alt="profile">
             <div class="profile__info">
                 <h2 class="profile__title">jacques cousteau</h2>
                 <div class="profile__edit">
@@ -41,8 +41,8 @@
 
         <section class="elements">
             <div class="element">
-                <img class="image__element" src="images/Valle de Yosemite.jpg" alt="Valle de Yosemite">
-                <div class="button_text-like">
+                <img class="element__image" src="images/Valle de Yosemite.jpg" alt="Valle de Yosemite">
+                <div class="element__text-like">
                 <p class="element__text">Valle de Yosemite</p>
                 <button class=" element__button-like">
                     <img src="images/Vector corazon.svg" alt="like">
@@ -50,8 +50,8 @@
             </div>
 
             <div class="element">
-                <img class="image__element" src="images/lago.png" alt="Lago Louise">
-                <div class="button_text-like">
+                <img class="element__image" src="images/lago.png" alt="Lago Louise">
+                <div class="element__text-like">
                 <p class="element__text">Lago Louise</p>
                 <button class=" element__button-like">
                     <img src="images/Vector corazon.svg" alt="like">
@@ -60,8 +60,8 @@
             </div>
 
             <div class="element">
-                <img class="image__element" src="images/montañas calvas.png" alt="Montañas Calvas">
-                <div class="button_text-like">
+                <img class="element__image" src="images/montañas calvas.png" alt="Montañas Calvas">
+                <div class="element__text-like">
                 <p class="element__text">Montañas Calvas</p>
                 <button class=" element__button-like">
                     <img src="images/Vector corazon.svg" alt="like">
@@ -70,8 +70,8 @@
             </div>
 
             <div class="element">
-                <img class="image__element" src="images/latermar.png" alt="Latemar">
-                <div class="button_text-like">
+                <img class="element__image" src="images/latermar.png" alt="Latemar">
+                <div class="element__text-like">
                 <p class="element__text">Latemar</p>
                 <button class=" element__button-like">
                     <img src="images/Vector corazon.svg" alt="like">
@@ -80,8 +80,8 @@
             </div>
 
             <div class="element">
-                <img class="image__element" src="images/vanios.png" alt="Vanois National">
-                <div class="button_text-like">
+                <img class="element__image" src="images/vanios.png" alt="Vanois National">
+                <div class="element__text-like">
                 <p class="element__text">Vanois National...</p>
                 <button class=" element__button-like">
                     <img src="images/Vector corazon.svg" alt="like">
@@ -90,8 +90,8 @@
             </div>
 
             <div class="element">
-                <img class="image__element" src="images/lago di braies.png" alt="Lago di Braies">
-                <div class="button_text-like">
+                <img class="element__image" src="images/lago di braies.png" alt="Lago di Braies">
+                <div class="element__text-like">
                 <p class="element__text">Lago di Braies</p>
                 <button class=" element__button-like">
                     <img src="images/Vector corazon.svg" alt="like">
@@ -103,6 +103,19 @@
     <footer class="footer">
         <p class="footer__text">&copy; 2024 Around The U.S.</p>
     </footer>
+    <div class="popup">
+        <div class="popup__container">
+        <button class="popup__button-close" type="button"> 
+            <img src="images/Vector_add.png" alt="boton cerrar"></button>
+        <h3 class="popup__title">Editar Perfil</h3>
+        <form class="popup__form" name="editar">
+            <input class="popup__input" type="text" name="name" placeholder="Nombre">
+            <input class="popup__input" type="text" name="myself" placeholder="Acerca de mí">
+            <button class="popup__button-submit" type="submit">Guardar</button>
+        </form>
+    </div>
+    </div>
 </div>
+<script src="/pages/cuadro_emergente.js"> </script>
 </body>
 </html>

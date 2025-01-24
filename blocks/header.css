@@ -8,14 +8,15 @@
 }
 
 
-@media screen  and (max-width: 842px){
+@media screen  and (max-width: 968px){
     .header{
         margin: auto;
+        max-width: 560px;
     }
     
 }
 
-@media screen and (max-width: 560px){
+@media screen and (max-width: 620px){
     
     .header{
         max-width: 320px;

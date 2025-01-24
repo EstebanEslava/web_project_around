@@ -1,4 +1,6 @@
 .element {
+    max-width: 282px;
+    max-height: 361px;
     background: #fff;
     color: #000;
     border-radius: 10px;
@@ -29,6 +31,7 @@
 
 .element__button-like{
     margin-right: 30px;
+    max-height: 19px;
     background: #fff;
     display: flex;
     align-items: center;
@@ -41,15 +44,23 @@
 
 .element__text-like{
     display: flex;
+    align-items: center;
 
 }
 
-@media screen  and (max-width: 842px){
+@media screen  and (max-width: 968px){
 
+    .element{
+        max-width: 261px;
+    }
+    
+    .element__text{
+        font-size: 18px;
+    }
 }
 
 
-@media screen and (max-width: 560px){
+@media screen and (max-width: 620px){
     .element{
         max-width: 282px;
     }

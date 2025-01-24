@@ -4,11 +4,14 @@
     display: grid;
 }
 
-@media screen  and (max-width: 842px){
+@media screen  and (max-width: 968px){
 
+    .content{
+        max-width: 560px;
+    }
 }
 
-@media screen and (max-width: 560px){
+@media screen and (max-width: 620px){
     
     .content {
         max-width: 282px;

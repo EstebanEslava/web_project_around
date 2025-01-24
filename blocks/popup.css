@@ -1,5 +1,5 @@
 .popup {
-    max-width: 1280px;
+
     min-height: 720px;
     display: flex;
     justify-content: center;
@@ -14,6 +14,7 @@
     background: #fff;
     display: flex;
     flex-direction: column;
+    font-family: "inter";
     position: relative;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -56,6 +57,7 @@
     width: 100%;
     margin-left: 35px;
     margin-bottom: 30px;
+    font-family: "inter";
     border: 0;
     border-bottom: 1px inset #000;
 }
@@ -66,6 +68,7 @@
     height: 50px;
     margin-top: 18px;
     margin-left: 36px;
+    font-family: "inter";
     color: #fff;
     background: #000;
 
@@ -75,16 +78,11 @@
     opacity: 60%;
 }
 
-@media screen and (max-width: 842px){
-    
-}
 
-@media screen and (max-width: 560px){
 
-    .popup{
-        min-width: 320px;
+@media screen and (max-width: 620px){
 
-    }
+
 
     .popup__button-close{
         width: 22px;
@@ -96,10 +94,16 @@
         width: 282px;
     }
 
+    .popup__title{
+        margin-left: 22px;
+        font-size: 18px;
+    }
+
     .popup__input{
         max-width: 238px;
         height: 26px;
         margin-left: 22px;
+        font-size: 14px;
     }
 
     .popup__button-submit{

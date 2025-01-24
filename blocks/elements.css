@@ -7,15 +7,16 @@
 
 }
 
-@media screen  and (max-width: 842px){
+@media screen  and (max-width: 968px){
     .elements{
-        max-width: 442px;
+        max-width: 560px;
         grid-template-columns: 1fr 1fr;
         margin: auto;
+    
     }
 }
 
-@media screen and (max-width: 560px){
+@media screen and (max-width: 620px){
     .elements{
         max-width: 282px;
         grid-template-columns: 1fr;

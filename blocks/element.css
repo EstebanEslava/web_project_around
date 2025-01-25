@@ -38,6 +38,10 @@
     border: 0;
 }
 
+.element__button-like_active{
+    color: #000;
+}
+
 .element__button-like:hover{
     opacity: 60%;
 }

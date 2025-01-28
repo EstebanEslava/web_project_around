@@ -1,9 +1,15 @@
+
+
 .popup {
-    background: rgba(0, 0, 0, 1);
+    background: rgba(0, 0, 0, 0.1);
     min-height: 720px;
+    min-width: 1280px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
     display: none;
 
 }
@@ -25,6 +31,7 @@
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    
 }
 
 .popup__button-close{
@@ -56,7 +63,17 @@
     line-height: 29px;
 }   
 
-.popup__input{
+.popup__name{
+    max-width: 358px;
+    width: 100%;
+    margin-left: 35px;
+    margin-bottom: 30px;
+    font-family: "inter";
+    border: 0;
+    border-bottom: 1px inset #000;
+}
+
+.popup__occupation{
     max-width: 358px;
     width: 100%;
     margin-left: 35px;

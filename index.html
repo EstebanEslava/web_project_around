@@ -12,6 +12,7 @@
 </head>
 <body>
     <div class="page">
+        
         <header class="header">
             <img class="header__title" src="images/Vector.png" alt="logo">
         </header>
@@ -22,7 +23,7 @@
             <div class="profile__info">
                 <h1 class="profile__title">jacques cousteau</h1>
                 <div class="profile__edit">
-                    <button class="profile__button-edit">
+                    <button class="profile__button-edit" id="button-opened">
                         <img class="image__button-edit" src="images/Vector_lapiz.png" alt="boton de editar">
                     </button>
                 </div>
@@ -105,15 +106,16 @@
     <footer class="footer">
         <p class="footer__text">&copy; 2024 Around The U.S.</p>
     </footer>
-    <div class="popup popup_opened">
-        <div class="popup__container">
-        <button class="popup__button-close" type="button"> 
+
+    <div class="popup " id="popup">
+        <div class="popup__container popup_opened" >
+        <button class="popup__button-close" type="button" id="button-close"> 
             <img src="images/Vector_add.png" alt="boton cerrar"></button>
         <h2 class="popup__title">Editar Perfil</h2>
         <form class="popup__form" name="editar">
-            <input class="popup__input" type="text" name="name" placeholder="Nombre">
-            <input class="popup__input" type="text" name="myself" placeholder="Acerca de mí">
-            <button class="popup__button-submit" type="submit">Guardar</button>
+            <input class="popup__name" id="input-name" type="text" name="name" placeholder="Nombre">
+            <input class="popup__occupation" id="input-occupation" type="text" name="myself" placeholder="Acerca de mí">
+            <button class="popup__button-submit" id="submit" type="submit">Guardar</button>
         </form>
     </div>
     </div>

@@ -3,7 +3,8 @@
 .popup {
     background: rgba(0, 0, 0, 0.1);
     min-height: 720px;
-    min-width: 1280px;
+    max-width: 1280px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,10 +101,19 @@
 }
 
 
+@media screen and (max-width: 968px) {
+    
+    .popup{
+        min-width: 560px;
+        
+    }
+}
 
 @media screen and (max-width: 620px){
 
-
+    .popup{
+        min-width: 282px;
+    }
 
     .popup__button-close{
         width: 22px;
@@ -120,7 +130,14 @@
         font-size: 18px;
     }
 
-    .popup__input{
+    .popup__name{
+        max-width: 238px;
+        height: 26px;
+        margin-left: 22px;
+        font-size: 14px;
+    }
+
+    .popup__occupation{
         max-width: 238px;
         height: 26px;
         margin-left: 22px;

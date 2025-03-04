@@ -32,7 +32,7 @@
             </div>
 
             <div class="profile__add">
-                <button class="profile__button-add">
+                <button class="profile__button-add" id="button-openedAdd">
                     <img class="profile__image-add" src="images/Vector_add.png" alt=" boton de agregar">
                 </button>
             </div>
@@ -41,65 +41,19 @@
         </section>
 
         <section class="elements">
-            
+            <template id="element-template">
             <div class="element">
-                <img class="element__image" src="images/Valle_de_Yosemite.jpg" alt="Valle de Yosemite">
+                <img class="element__image" src=""  alt="Valle de Yosemite">
                 <div class="element__text-like">
-                <p class="element__text">Valle de Yosemite</p>
-                <button class=" element__button-like">
-                    <img src="images/Vector_corazon.svg" alt="like">
+                    <button class="element-remove__card">
+                        <img src="/images/Trash.svg" alt="remover card">
+                    </button>
+                <p class="element__text"></p>
+                <button class="element__button-like" id="button-like">
+                    <img src="images/Vector_corazon.svg" alt="like" >
                 </button></div>
             </div>
-
-            <div class="element">
-                <img class="element__image" src="images/lago.png" alt="Lago Louise">
-                <div class="element__text-like">
-                <p class="element__text">Lago Louise</p>
-                <button class=" element__button-like">
-                    <img src="images/Vector_corazon.svg" alt="like">
-                </button>
-                </div>
-            </div>
-
-            <div class="element">
-                <img class="element__image" src="images/montañas_calvas.png" alt="Montañas Calvas">
-                <div class="element__text-like">
-                <p class="element__text">Montañas Calvas</p>
-                <button class=" element__button-like">
-                    <img src="images/Vector_corazon.svg" alt="like">
-                </button>
-                </div>
-            </div>
-
-            <div class="element">
-                <img class="element__image" src="images/latermar.png" alt="Latemar">
-                <div class="element__text-like">
-                <p class="element__text">Latemar</p>
-                <button class=" element__button-like element__button-like_active">
-                    <img src="images/Vector_corazon.svg" alt="like">
-                </button>
-                </div>
-            </div>
-
-            <div class="element">
-                <img class="element__image" src="images/vanios.png" alt="Vanois National">
-                <div class="element__text-like">
-                <p class="element__text">Vanois National...</p>
-                <button class=" element__button-like">
-                    <img src="images/Vector_corazon.svg" alt="like">
-                </button>
-                </div>
-            </div>
-
-            <div class="element">
-                <img class="element__image" src="images/lago_di_braies.png" alt="Lago di Braies">
-                <div class="element__text-like">
-                <p class="element__text">Lago di Braies</p>
-                <button class=" element__button-like">
-                    <img src="images/Vector_corazon.svg" alt="like">
-                </button>
-                </div>
-            </div>
+        </template>
         
         </section>
     </main>
@@ -107,7 +61,7 @@
         <p class="footer__text">&copy; 2024 Around The U.S.</p>
     </footer>
 
-    <div class="popup " id="popup">
+    <dialog class="popup " id="popup">
         <div class="popup__container " >
         <button class="popup__button-close" type="button" id="button-close"> 
             <img src="images/Vector_add.png" alt="boton cerrar"></button>
@@ -118,7 +72,32 @@
             <button class="popup__button-submit" id="submit" type="submit">Guardar</button>
         </form>
     </div>
+    </dialog>
+
+    <dialog class="popup-add" id="popup-add">
+        <div class="popup__container " >
+        <button class="popup__button-close" type="button" id="button-closeAdd"> 
+            <img src="images/Vector_add.png" alt="boton cerrar"></button>
+        <h2 class="popup__title">New Place</h2>
+        <form class="popup__form" name="editar" id="popup-add-form">
+            <input class="popup__name-title" id="name-title" type="text" name="name" placeholder="Title">
+            <input class="popup__image-url" id="image-url" type="text" name="myself" placeholder="Image URL">
+            <button class="popup__button-submit" id="submit" type="submit">Guardar</button>
+        </form>
     </div>
+    </dialog>
+
+    <dialog class="popup-image" id="popup-img">
+        <div class="popup__container " >
+            <button class="popup__button-close" type="button" id="button-close"> 
+                <img src="images/Vector_add.png" alt="boton cerrar"></button>
+    
+            <img class="popup-image__add" id="popup-image" src="" alt="imagen">
+            <h2 id="name-popup" class="popup__title">New Place</h2>
+        
+    </div>
+    </dialog>
+
 </div>
 <script src="./scripts/index.js"> </script>
 </body>

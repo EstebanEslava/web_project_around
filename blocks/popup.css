@@ -15,6 +15,35 @@
 
 }
 
+.popup-add {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 2;
+
+}
+
+.popup-image{
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 2;
+}
+
 .popup_opened{
     display: flex;
 }
@@ -74,7 +103,29 @@
     border-bottom: 1px inset #000;
 }
 
+.popup__name-title{
+    max-width: 358px;
+    width: 100%;
+    margin-left: 35px;
+    margin-bottom: 30px;
+    font-family: "inter";
+    border: 0;
+    border-bottom: 1px inset #000;
+}
+
 .popup__occupation{
+    max-width: 358px;
+    width: 100%;
+    margin-left: 35px;
+    margin-bottom: 30px;
+    font-family: "inter";
+    border: 0;
+    border-bottom: 1px inset #000;
+
+}
+
+
+.popup__image-url{
     max-width: 358px;
     width: 100%;
     margin-left: 35px;

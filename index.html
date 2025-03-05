@@ -1,104 +1,152 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Esteban Eslava">
-    <meta name="description" content="Around">
-    <meta name="keywords" content="Around, alrededor de estados unidos, alrededor, estados unidos"> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Esteban Eslava" />
+    <meta name="description" content="Around" />
+    <meta
+      name="keywords"
+      content="Around, alrededor de estados unidos, alrededor, estados unidos"
+    />
     <title>Around</title>
-    <link rel="icon" href="images/favicon.ico"/>
-    <link rel="stylesheet" href="pages/index.css">
-</head>
-<body>
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="pages/index.css" />
+  </head>
+  <body>
     <div class="page">
-        
-        <header class="header">
-            <img class="header__title" src="images/Vector.png" alt="logo">
-        </header>
-    
-    <main class="content">
+      <header class="header">
+        <img class="header__title" src="images/Vector.png" alt="logo" />
+      </header>
+
+      <main class="content">
         <section class="profile">
-            <img class="profile__image" src="images/Avatar.png" alt="profile">
-            <div class="profile__info">
-                <h1 class="profile__title">jacques cousteau</h1>
-                <div class="profile__edit">
-                    <button class="profile__button-edit" id="button-opened">
-                        <img class="profile__image-edit" src="images/Vector_lapiz.png" alt="boton de editar">
-                    </button>
-                </div>
-            
-            <p class="profile__text">Explorador</p>
+          <img class="profile__image" src="images/Avatar.png" alt="profile" />
+          <div class="profile__info">
+            <h1 class="profile__title">jacques cousteau</h1>
+            <div class="profile__edit">
+              <button class="profile__button-edit" id="button-opened">
+                <img
+                  class="profile__image-edit"
+                  src="images/Vector_lapiz.png"
+                  alt="boton de editar"
+                />
+              </button>
             </div>
 
-            <div class="profile__add">
-                <button class="profile__button-add" id="button-openedAdd">
-                    <img class="profile__image-add" src="images/Vector_add.png" alt=" boton de agregar">
-                </button>
-            </div>
-            
-            
+            <p class="profile__text">Explorador</p>
+          </div>
+
+          <div class="profile__add">
+            <button class="profile__button-add" id="button-openedAdd">
+              <img
+                class="profile__image-add"
+                src="images/Vector_add.png"
+                alt=" boton de agregar"
+              />
+            </button>
+          </div>
         </section>
 
         <section class="elements">
-            <template id="element-template">
+          <template id="element-template">
             <div class="element">
-                <img class="element__image" src=""  alt="Valle de Yosemite">
-                <div class="element__text-like">
-                    <button class="element-remove__card">
-                        <img src="/images/Trash.svg" alt="remover card">
-                    </button>
+              <img class="element__image" src="" alt="Valle de Yosemite" />
+              <div class="element__text-like">
+                <button class="element-remove__card" id="remover-card">
+                  <img src="/images/Trash.svg" alt="remover card" />
+                </button>
                 <p class="element__text"></p>
                 <button class="element__button-like" id="button-like">
-                    <img src="images/Vector_corazon.svg" alt="like" >
-                </button></div>
+                  <img src="images/Vector_corazon.svg" alt="like" />
+                </button>
+              </div>
             </div>
-        </template>
-        
+          </template>
         </section>
-    </main>
-    <footer class="footer">
+      </main>
+      <footer class="footer">
         <p class="footer__text">&copy; 2024 Around The U.S.</p>
-    </footer>
+      </footer>
 
-    <dialog class="popup " id="popup">
-        <div class="popup__container " >
-        <button class="popup__button-close" type="button" id="button-close"> 
-            <img src="images/Vector_add.png" alt="boton cerrar"></button>
-        <h2 class="popup__title">Editar Perfil</h2>
-        <form class="popup__form" name="editar">
-            <input class="popup__name" id="input-name" type="text" name="name" placeholder="Nombre">
-            <input class="popup__occupation" id="input-occupation" type="text" name="myself" placeholder="Acerca de mí">
-            <button class="popup__button-submit" id="submit" type="submit">Guardar</button>
-        </form>
+      <dialog class="popup" id="popup">
+        <div class="popup__container">
+          <button class="popup__button-close" type="button" id="button-close">
+            <img src="images/Vector_add.png" alt="boton cerrar" />
+          </button>
+          <h2 class="popup__title">Editar Perfil</h2>
+          <form class="popup__form" name="editar">
+            <input
+              class="popup__name"
+              id="input-name"
+              type="text"
+              name="name"
+              placeholder="Nombre"
+            />
+            <input
+              class="popup__occupation"
+              id="input-occupation"
+              type="text"
+              name="myself"
+              placeholder="Acerca de mí"
+            />
+            <button class="popup__button-submit" id="submit" type="submit">
+              Guardar
+            </button>
+          </form>
+        </div>
+      </dialog>
+
+      <dialog class="popup-add" id="popup-add">
+        <div class="popup__container">
+          <button
+            class="popup__button-close"
+            type="button"
+            id="button-closeAdd"
+          >
+            <img src="images/Vector_add.png" alt="boton cerrar" />
+          </button>
+          <h2 class="popup__title">New Place</h2>
+          <form class="popup__form" name="editar" id="popup-add-form">
+            <input
+              class="popup__name-title"
+              id="name-title"
+              type="text"
+              name="name"
+              placeholder="Title"
+            />
+            <input
+              class="popup__image-url"
+              id="image-url"
+              type="text"
+              name="myself"
+              placeholder="Image URL"
+            />
+            <button
+              class="popup__button-submit"
+              id="submit-image"
+              type="submit"
+            >
+              Guardar
+            </button>
+          </form>
+        </div>
+      </dialog>
+
+      <dialog class="popup-image" id="popup-img">
+        <div class="popup__container-image">
+          <button
+            class="popup__button-close"
+            type="button"
+            id="button-close-image"
+          >
+            <img src="images/Vector_add.png" alt="boton cerrar" />
+          </button>
+          <img class="popup-image__add" id="popup-image" src="" alt="imagen" />
+          <h2 id="name-popup" class="popup__title-image">New Place</h2>
+        </div>
+      </dialog>
     </div>
-    </dialog>
-
-    <dialog class="popup-add" id="popup-add">
-        <div class="popup__container " >
-        <button class="popup__button-close" type="button" id="button-closeAdd"> 
-            <img src="images/Vector_add.png" alt="boton cerrar"></button>
-        <h2 class="popup__title">New Place</h2>
-        <form class="popup__form" name="editar" id="popup-add-form">
-            <input class="popup__name-title" id="name-title" type="text" name="name" placeholder="Title">
-            <input class="popup__image-url" id="image-url" type="text" name="myself" placeholder="Image URL">
-            <button class="popup__button-submit" id="submit" type="submit">Guardar</button>
-        </form>
-    </div>
-    </dialog>
-
-    <dialog class="popup-image" id="popup-img">
-        <div class="popup__container " >
-            <button class="popup__button-close" type="button" id="button-close"> 
-                <img src="images/Vector_add.png" alt="boton cerrar"></button>
-    
-            <img class="popup-image__add" id="popup-image" src="" alt="imagen">
-            <h2 id="name-popup" class="popup__title">New Place</h2>
-        
-    </div>
-    </dialog>
-
-</div>
-<script src="./scripts/index.js"> </script>
-</body>
+    <script src="./scripts/index.js"></script>
+  </body>
 </html>

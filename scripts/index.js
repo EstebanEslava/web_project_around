@@ -1,3 +1,7 @@
+import { restValidation, validationConfig } from "./validation";
+
+restValidation();
+
 let openedPopup = document.getElementById("popup");
 let ButtonOpened = document.getElementById("button-opened");
 let ButtonClose = document.getElementById("button-close");

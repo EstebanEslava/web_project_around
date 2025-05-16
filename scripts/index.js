@@ -1,11 +1,12 @@
-import { restValidation, validationConfig } from "./validation";
+import { enableValidation } from "./validate.js";
 
-restValidation();
+enableValidation();
 
-let openedPopup = document.getElementById("popup");
-let ButtonOpened = document.getElementById("button-opened");
-let ButtonClose = document.getElementById("button-close");
-let ButtonSubmit = document.getElementById("submit");
+const form = document.querySelector(".popup__form");
+const openedPopup = document.getElementById("popup-profile");
+const ButtonOpened = document.getElementById("button-opened");
+const ButtonClose = document.getElementById("button-close");
+const ButtonSubmit = document.getElementById("submit");
 const submitImage = document.getElementById("submit-image");
 const InputName = document.getElementById("input-name");
 const inputOccupation = document.getElementById("input-occupation");
@@ -84,6 +85,35 @@ function addCard(card) {
 
   cardList.prepend(newCard);
 }
+ButtonSubmit.addEventListener("click", function (evt) {
+  evt.preventDefault();
+
+  const NameValue = InputName.value;
+  const OccupationValue = inputOccupation.value;
+
+  NameProfile.textContent = NameValue;
+  Occupation.textContent = OccupationValue;
+
+  openedPopup.classList.remove("popup_opened");
+});
+const popups = document.querySelectorAll(".popup");
+popups.forEach((popup) => {
+  popup.addEventListener("click", function (evt) {
+    if (evt.target === popup) {
+      popup.classList.remove("popup_opened");
+
+      handlerPopup(popup);
+
+      //seguir con el boton de scape
+    }
+  });
+  document.addEventListener("keydown", function (evt) {
+    if (evt.key === "Escape") {
+      popup.classList.remove("popup_opened");
+      form.reset();
+    }
+  });
+});
 
 ButtonCloseImage.addEventListener("click", function () {
   imagePopup.classList.remove("popup_opened");
@@ -94,7 +124,8 @@ ButtonOpenedAdd.addEventListener("click", function () {
 });
 
 ButtonCloseAdd.addEventListener("click", function () {
-  openedPopupAdd.classList.remove("popup_opened");
+  handlerPopup();
+  form.reset();
 });
 
 ButtonOpened.addEventListener("click", function () {
@@ -102,8 +133,13 @@ ButtonOpened.addEventListener("click", function () {
 });
 
 ButtonClose.addEventListener("click", function () {
-  openedPopup.classList.remove("popup_opened");
+  handlerPopup();
+  form.reset();
 });
+function handlerPopup() {
+  openedPopup.classList.remove("popup_opened");
+  openedPopupAdd.classList.remove("popup_opened");
+}
 
 submitImage.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -118,15 +154,4 @@ submitImage.addEventListener("click", function (evt) {
   addCard(card);
 
   openedPopupAdd.classList.remove("popup_opened");
-});
-ButtonSubmit.addEventListener("click", function (evt) {
-  evt.preventDefault();
-
-  const NameValue = InputName.value;
-  const OccupationValue = inputOccupation.value;
-
-  NameProfile.textContent = NameValue;
-  Occupation.textContent = OccupationValue;
-
-  openedPopup.classList.remove("popup_opened");
 });

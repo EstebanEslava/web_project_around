@@ -69,45 +69,53 @@
         <p class="footer__text">&copy; 2024 Around The U.S.</p>
       </footer>
 
-      <dialog class="popup" id="popup">
+      <dialog class="popup" id="popup-profile">
         <div class="popup__container">
           <button class="popup__button-close" type="button" id="button-close">
             <img src="images/Vector_add.png" alt="boton cerrar" />
           </button>
           <h2 class="popup__title">Editar Perfil</h2>
           <form class="popup__form" name="editar" novalidate>
-            <input
-              class="popup__name"
-              id="input-name"
-              type="text"
-              name="name"
-              placeholder="Nombre"
-              minlength="2"
-              maxlength="40"
-              required
-            />
+            <label class="popup__field">
+              <input
+                class="popup__input popup__input-name"
+                id="input-name"
+                type="text"
+                name="name"
+                placeholder="Nombre"
+                minlength="2"
+                maxlength="40"
+                required
+              />
 
-            <span class="popup__input-error">ada</span>
-            <input
-              class="popup__occupation"
-              id="input-occupation"
-              type="text"
-              name="myself"
-              placeholder="Acerca de mí"
-              minlength="2"
-              maxlength="200"
-              required
-            />
-            <span class="popup__input-error">af</span>
-
-            <button class="popup__button-submit" id="submit" type="submit">
+              <span class="popup__error" id="input-name-error"></span>
+            </label>
+            <label class="popup__field">
+              <input
+                class="popup__input popup__input_type_occupation"
+                id="input-occupation"
+                type="text"
+                name="myself"
+                placeholder="Acerca de mí"
+                minlength="2"
+                maxlength="200"
+                required
+              />
+              <span class="popup__error" id="input-occupation-error"></span>
+            </label>
+            <button
+              class="popup__button-submit"
+              id="submit"
+              type="submit"
+              disabled
+            >
               Guardar
             </button>
           </form>
         </div>
       </dialog>
 
-      <dialog class="popup-add" id="popup-add">
+      <dialog class="popup" id="popup-add">
         <div class="popup__container">
           <button
             class="popup__button-close"
@@ -123,31 +131,35 @@
             id="popup-add-form"
             novalidate
           >
-            <input
-              class="popup__name-title"
-              id="name-title"
-              type="text"
-              name="name"
-              placeholder="Title"
-              minlength="2"
-              maxlength="30"
-              required
-            />
-            <span class="popup__input-error"></span>
-            <input
-              class="popup__image-url"
-              id="image-url"
-              type="text"
-              name="myself"
-              placeholder="Image URL"
-              required
-              minlength="13"
-            />
-            <span class="popup__input-error"></span>
+            <label class="popup__field">
+              <input
+                class="popup__input popup__input_type_name-title"
+                id="name-title"
+                type="text"
+                name="name"
+                placeholder="Title"
+                minlength="2"
+                maxlength="30"
+                required
+              />
+              <span class="popup__error" id="name-tite-error"></span>
+            </label>
+            <label class="popup__field">
+              <input
+                class="popup__input popup__input_type_image-url"
+                id="image-url"
+                type="url"
+                placeholder="Image URL"
+                required
+              />
+              <!-- pattern="^(http(s)?://)+[\w-._~:/?#[]@!$&'()*+,;=.]+$" -->
+              <span class="popup__error" id="image-url-error"></span>
+            </label>
             <button
               class="popup__button-submit"
               id="submit-image"
               type="submit"
+              disabled
             >
               Guardar
             </button>
@@ -155,7 +167,7 @@
         </div>
       </dialog>
 
-      <dialog class="popup-image" id="popup-img">
+      <dialog class="popup" id="popup-img">
         <div class="popup__container-image">
           <button
             class="popup__button-close"
@@ -169,7 +181,7 @@
         </div>
       </dialog>
     </div>
-    <script type="modulo" src="./scripts/index.js"></script>
-    <script type="modulo" src="./scripts/validation.js"></script>
+    <script type="module" src="./scripts/index.js"></script>
+    <script type="module" src="./scripts/validate.js"></script>
   </body>
 </html>

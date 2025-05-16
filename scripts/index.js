@@ -3,6 +3,7 @@ import { enableValidation } from "./validate.js";
 enableValidation();
 
 const form = document.querySelector(".popup__form");
+const popupError = document.querySelectorAll(".popup__error");
 const openedPopup = document.getElementById("popup-profile");
 const ButtonOpened = document.getElementById("button-opened");
 const ButtonClose = document.getElementById("button-close");
@@ -101,15 +102,21 @@ popups.forEach((popup) => {
   popup.addEventListener("click", function (evt) {
     if (evt.target === popup) {
       popup.classList.remove("popup_opened");
-
+      popupError.forEach((menssangeError) => {
+        menssangeError.classList.remove("popup__error_active");
+      });
       handlerPopup(popup);
-
-      //seguir con el boton de scape
+      form.reset();
     }
   });
+
   document.addEventListener("keydown", function (evt) {
     if (evt.key === "Escape") {
       popup.classList.remove("popup_opened");
+
+      popupError.forEach((menssangeError) => {
+        menssangeError.classList.remove("popup__error_active");
+      });
       form.reset();
     }
   });
@@ -125,6 +132,7 @@ ButtonOpenedAdd.addEventListener("click", function () {
 
 ButtonCloseAdd.addEventListener("click", function () {
   handlerPopup();
+
   form.reset();
 });
 
@@ -134,6 +142,7 @@ ButtonOpened.addEventListener("click", function () {
 
 ButtonClose.addEventListener("click", function () {
   handlerPopup();
+
   form.reset();
 });
 function handlerPopup() {

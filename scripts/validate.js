@@ -2,12 +2,10 @@ const enableValidation = () => {
   const popupForms = Array.from(document.querySelectorAll(".popup__form"));
 
   popupForms.forEach((popupForm) => {
-    const popupButton = popupForm.querySelector(".popup__button-submit");
+    const popupButtonSubmit = popupForm.querySelector(".popup__button-submit");
     const inputs = Array.from(popupForm.querySelectorAll(".popup__input"));
-    const btnsSubmits = Array.from(
-      popupForm.querySelectorAll(".popup__button-submit")
-    );
-    toggleButtonState(inputs, popupButton);
+
+    toggleButtonState(inputs, popupButtonSubmit);
 
     inputs.forEach((input) => {
       //
@@ -16,7 +14,7 @@ const enableValidation = () => {
 
       input.addEventListener("input", () => {
         isValid(popupForm, input, popupError);
-        toggleButtonState(inputs, popupButton);
+        toggleButtonState(inputs, popupButtonSubmit);
       });
     });
   });
@@ -32,14 +30,14 @@ const isValid = (popupForm, input) => {
 
 const showInputError = (popupForm, input, errorMessage) => {
   const popupError = popupForm.querySelector(`#${input.id}-error`);
-  input.classList.add("popup__input:invalid");
+  //input.classList.add("popup__input:invalid");
   popupError.textContent = errorMessage;
   popupError.classList.add("popup__error_active");
 };
 
 const hideInputError = (popupForm, input) => {
   const popupError = popupForm.querySelector(`#${input.id}-error`);
-  input.classList.remove("popup__input:invalid");
+  //input.classList.remove("popup__input:invalid");
   popupError.classList.remove("popup__error_active");
   popupError.textContent = "";
 };
@@ -50,7 +48,6 @@ const hasInvalidInput = (inputs) => {
 };
 
 const toggleButtonState = (inputs, saveButton) => {
-  console.log(inputs);
   if (hasInvalidInput(inputs)) {
     saveButton.classList.add("popup__button-submit_disable");
     saveButton.disabled = true;

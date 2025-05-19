@@ -114,11 +114,11 @@
   font-weight: 400;
   line-height: 100%;
   color: red;
-  opacity: 0;
+  display: none;
 }
 
 .popup__error_active {
-  opacity: 1;
+  display: inline-block;
 }
 
 .popup-image__add {
@@ -141,8 +141,8 @@
 }
 
 .popup__button-submit_disable {
-  background: rgb(240, 240, 240);
-  border: rgb(240, 240, 240);
+  background-color: #ccc;
+  opacity: 0.6;
 }
 
 .popup__button-submit:hover {

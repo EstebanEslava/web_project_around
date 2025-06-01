@@ -30,14 +30,14 @@ const isValid = (popupForm, input) => {
 
 const showInputError = (popupForm, input, errorMessage) => {
   const popupError = popupForm.querySelector(`#${input.id}-error`);
-  //input.classList.add("popup__input:invalid");
+
   popupError.textContent = errorMessage;
   popupError.classList.add("popup__error_active");
 };
 
 const hideInputError = (popupForm, input) => {
   const popupError = popupForm.querySelector(`#${input.id}-error`);
-  //input.classList.remove("popup__input:invalid");
+
   popupError.classList.remove("popup__error_active");
   popupError.textContent = "";
 };
@@ -57,4 +57,4 @@ const toggleButtonState = (inputs, saveButton) => {
   }
 };
 
-export { enableValidation };
+// export { enableValidation };

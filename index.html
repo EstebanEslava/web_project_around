@@ -75,7 +75,12 @@
             <img src="images/Vector_add.png" alt="boton cerrar" />
           </button>
           <h2 class="popup__title">Editar Perfil</h2>
-          <form class="popup__form" name="editar" novalidate>
+          <form
+            class="popup__form"
+            name="editar"
+            id="popup-profile-form"
+            novalidate
+          >
             <label class="popup__field">
               <input
                 class="popup__input popup__input-name"
@@ -176,13 +181,17 @@
           >
             <img src="images/Vector_add.png" alt="boton cerrar" />
           </button>
-          <img class="popup-image__add" id="popup-image" src="" alt="imagen" />
+          <img
+            class="popup-image__add"
+            id="popup-image"
+            src="https://dummyimage.com/433x530/000/fff&text=imagen"
+            alt="imagen"
+          />
           <!-- revisar src de la linea 179 que valor ponerle -->
           <h2 id="name-popup" class="popup__title-image">New Place</h2>
         </div>
       </dialog>
     </div>
     <script type="module" src="./scripts/index.js"></script>
-    <script type="module" src="./scripts/validate.js"></script>
   </body>
 </html>

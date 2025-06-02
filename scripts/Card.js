@@ -1,3 +1,5 @@
+import { handleOpenImagePopup } from "./utils.js";
+
 class Card {
   constructor(data, cardSelector) {
     this._name = data.name;
@@ -16,8 +18,8 @@ class Card {
 
   createCard() {
     this._element = this._getTemplate();
-
-    this._element.querySelector(".element__image").src = this._image;
+    this._imageElement = this._element.querySelector(".element__image");
+    this._imageElement.src = this._image;
     this._element.querySelector(".element__text").textContent = this._name;
     this._like = this._element.querySelector("#button-like");
     this._removeCard = this._element.querySelector("#remover-card");
@@ -33,9 +35,10 @@ class Card {
       evt.target.classList.toggle("element__button-like_active");
     });
 
-    //this._image.addEventListener("click", () => {
-    // this._imageElement.classList.Add("popup_opened");
-    //});
+    this._imageElement.addEventListener("click", () => {
+      handleOpenImagePopup(this._name, this._image);
+    });
   }
 }
+
 export default Card;

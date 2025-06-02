@@ -1,8 +1,16 @@
 import Card from "./Card.js";
 
-const popupElement = document.querySelector(".popup");
-const popupImage = document.querySelector(".element__image");
+const namePopupImg = document.querySelector("#name-popup");
+const popupImage = document.querySelector("#popup-img");
+const popupImageAdd = document.querySelector("#popup-image");
 const popupButtonClose = document.querySelector(".popup__button-close");
+
+function handleOpenImagePopup(titulo, image) {
+  popupImage.classList.add("popup_opened");
+  namePopupImg.textContent = titulo;
+  popupImageAdd.src = image;
+  popupImageAdd.alt = titulo;
+}
 
 function handleOpenPopup(popup) {
   popup.classList.add("popup_opened");
@@ -31,4 +39,10 @@ function renderCards(initialCards) {
   });
 }
 
-export { handleOpenPopup, handleClosePopup, setEventListeners, renderCards };
+export {
+  handleOpenPopup,
+  handleClosePopup,
+  setEventListeners,
+  renderCards,
+  handleOpenImagePopup,
+};

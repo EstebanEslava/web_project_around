@@ -20,16 +20,11 @@ const inputOccupation = document.getElementById("input-occupation");
 const nameProfile = document.querySelector(".profile__title");
 const Occupation = document.querySelector(".profile__occupation");
 
-const InputNameCard = document.getElementById("name-title");
-const inputImageUrl = document.getElementById("image-url");
-
 const imagePopup = document.querySelector("#popup-img");
 const openedPopupAdd = document.getElementById("popup-add");
 const buttonOpenedAdd = document.getElementById("button-openedAdd");
 const buttonCloseAdd = document.getElementById("button-closeAdd");
 
-const popupImage = document.querySelector("#popup-image");
-const namePopup = document.querySelector("#name-popup");
 const buttonCloseImage = document.getElementById("button-close-image");
 const initialCards = [
   {

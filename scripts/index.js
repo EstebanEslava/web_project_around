@@ -184,7 +184,7 @@ submitImage.addEventListener("click", function (evt) {
   const card = new Card(cardItem, "#element-template");
   const cardElement = card.createCard();
 
-  document.querySelector(".elements").append(cardElement);
+  document.querySelector(".elements").prepend(cardElement);
 
   openedPopupAdd.classList.remove("popup_opened");
   popupFormAdd.reset();

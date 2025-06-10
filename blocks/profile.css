@@ -19,7 +19,7 @@
   max-height: 120px;
 }
 
-.profile__title {
+.profile__name {
   min-width: 373px;
   margin-bottom: 0;
   margin-top: 0;
@@ -94,7 +94,7 @@
     margin-top: 30px;
   }
 
-  .profile__title {
+  .profile__name {
     min-width: 350px;
     margin-bottom: 0;
     margin-left: 10px;
@@ -135,7 +135,7 @@
     align-items: center;
   }
 
-  .profile__title {
+  .profile__name {
     min-width: 196px;
     margin-top: 0;
     margin-bottom: 0;

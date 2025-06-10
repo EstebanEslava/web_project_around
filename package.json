@@ -1,0 +1,22 @@
+{
+  "name": "web_project_around",
+  "version": "1.0.0",
+  "description": "Tripleten web_project_around",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EstebanEslava/web_project_around.git"
+  },
+  "keywords": [
+    "around"
+  ],
+  "author": "Esteban Eslava",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EstebanEslava/web_project_around/issues"
+  },
+  "homepage": "https://github.com/EstebanEslava/web_project_around#readme"
+}

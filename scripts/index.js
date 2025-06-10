@@ -97,10 +97,12 @@ document.querySelector("#button-opened").addEventListener("click", () => {
   const form = document.forms["editar"];
   form.name.value = userData.name;
   form.occupation.value = userData.occupation;
+  profileEditPopup.resetValidation();
   profileEditPopup.open();
 });
 
 document.querySelector("#button-openedAdd").addEventListener("click", () => {
+  addCardPopup.resetValidation();
   addCardPopup.open();
 });
 
@@ -121,10 +123,10 @@ const cardSection = new Section(
       const cardElement = createCard(item);
     },
   },
-  ".element"
+  ".elements"
 );
 
-cardSection.renderItems();
+// cardSection.renderItems();
 
 // function addCard(card) {
 //   const newCard = cardTemplate.content

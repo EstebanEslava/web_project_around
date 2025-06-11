@@ -1,5 +1,3 @@
-import { handleOpenImagePopup } from "./utils.js";
-
 class Card {
   constructor(data, cardSelector, handleCardClick) {
     this._name = data.name;
@@ -37,7 +35,7 @@ class Card {
     });
 
     this._imageElement.addEventListener("click", () => {
-      handleOpenImagePopup(this._name, this._image);
+      this._handleCardClick(this._name, this._image);
     });
   }
 }

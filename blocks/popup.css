@@ -120,7 +120,7 @@
   display: inline-block;
 }
 
-.popup__image-add {
+.popup__image {
   width: 100%;
   height: 100%;
   object-fit: cover;

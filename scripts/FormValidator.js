@@ -79,6 +79,21 @@ class FormValidator {
       saveButton.disabled = false;
     }
   };
+
+  resetValidation() {
+    const inputs = Array.from(
+      this._formElement.querySelectorAll(this._inputSelector)
+    );
+    const submitButton = this._formElement.querySelector(
+      this._submitButtonSelector
+    );
+
+    inputs.forEach((input) => {
+      this._hideInputError(this._formElement, input);
+    });
+
+    this._toggleButtonState(inputs, submitButton);
+  }
 }
 
 export default FormValidator;

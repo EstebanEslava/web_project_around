@@ -34,7 +34,7 @@
   text-decoration-skip-ink: none;
 }
 
-.element-remove__card {
+.element__remove-card {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -42,7 +42,7 @@
   background: none;
 }
 
-.element-remove__card:hover {
+.element__remove-card:hover {
   opacity: 60%;
 }
 

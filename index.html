@@ -21,9 +21,23 @@
 
       <main class="content">
         <section class="profile">
-          <img class="profile__image" src="images/Avatar.png" alt="profile" />
+          <div class="profile__avatar-container">
+            <img class="profile__image" src="images/Avatar.png" alt="avatar" />
+            <button
+              class="profile__avatar-edit-button"
+              id="button-openedAvatar"
+              type="button"
+            >
+              <img
+                class="profile__image-avatar"
+                src="/images/Vector_lapiz.png"
+                alt="editar Avatar"
+              />
+            </button>
+          </div>
+
           <div class="profile__info">
-            <h1 class="profile__name">jacques cousteau</h1>
+            <h1 class="profile__name"></h1>
             <div class="profile__edit">
               <button class="profile__button-edit" id="button-opened">
                 <img
@@ -34,7 +48,7 @@
               </button>
             </div>
 
-            <p class="profile__occupation">Explorador</p>
+            <p class="profile__occupation"></p>
           </div>
 
           <div class="profile__add">
@@ -53,7 +67,7 @@
             <div class="element">
               <img class="element__image" src="" alt="Valle de Yosemite" />
               <div class="element__text-like">
-                <button class="element-remove__card" id="remover-card">
+                <button class="element__remove-card" id="remover-card">
                   <img src="/images/Trash.svg" alt="remover card" />
                 </button>
                 <p class="element__text"></p>
@@ -189,6 +203,73 @@
             alt="imagen"
           />
           <h2 id="name-popup" class="popup__title-image">New Place</h2>
+        </div>
+      </dialog>
+
+      <dialog class="popup" id="popup-avatar">
+        <div class="popup__container">
+          <button
+            class="popup__button-close"
+            type="button"
+            id="button-close-avatar"
+          >
+            <img src="images/Vector_add.png" alt="boton cerrar" />
+          </button>
+          <h2 class="popup__title-avatar">Cambiar foto de perfil</h2>
+          <form
+            class="popup__form"
+            name="Avatar"
+            id="popup-edit-avatar"
+            novalidate
+          >
+            <label class="popup__field">
+              <input
+                class="popup__input popup__input_type_image-url"
+                id="image-avatar"
+                type="url"
+                name="link"
+                placeholder="Image URL"
+                required
+              />
+              <!-- pattern="^(http(s)?://)+[\w-._~:/?#[]@!$&'()*+,;=.]+$" -->
+              <span class="popup__error" id="image-avatar-error"></span>
+            </label>
+            <button
+              class="popup__button-submit"
+              id="submit-avatar"
+              type="submit"
+              disabled
+            >
+              Guardar
+            </button>
+          </form>
+        </div>
+      </dialog>
+
+      <dialog class="popup" id="popup-alert">
+        <div class="popup__container">
+          <button
+            class="popup__button-close"
+            type="button"
+            id="button-close-alert"
+          >
+            <img src="images/Vector_add.png" alt="boton cerrar" />
+          </button>
+          <h2 class="popup__title-alert">¿Estas seguro/a?</h2>
+          <form
+            class="popup__form"
+            name="agregar"
+            id="popup-alert-form"
+            novalidate
+          >
+            <button
+              class="popup__button-submit"
+              id="submit-alert"
+              type="submit"
+            >
+              Sí
+            </button>
+          </form>
         </div>
       </dialog>
     </div>

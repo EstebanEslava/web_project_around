@@ -1,7 +1,8 @@
 class UserInfo {
-  constructor({ nameSelector, occupationSelector }) {
+  constructor({ nameSelector, occupationSelector, avatarSelector }) {
     this._nameElement = document.querySelector(nameSelector);
     this._occupationElement = document.querySelector(occupationSelector);
+    this._avatarElement = document.querySelector(avatarSelector);
   }
 
   getUserInfo() {
@@ -14,6 +15,10 @@ class UserInfo {
   setUserInfo({ name, occupation }) {
     this._nameElement.textContent = name;
     this._occupationElement.textContent = occupation;
+  }
+
+  setUserAvatar(avatarUrl) {
+    this._avatarElement.src = avatarUrl;
   }
 }
 
